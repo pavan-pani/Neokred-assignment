@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.li-icon{
+  @apply py-2 flex items-center gap-3
+}
