@@ -7,3 +7,13 @@ This project is built using **React.js** and **Tailwind CSS** as a frontend fram
 ## Links
 
 - [live website link](https://neokredassignmentpavan.vercel.app/)
+
+## Tech stack
+
+- Ui -> ReactsJS 18v
+- Style - > Tailwind CSS
+- Programimg language -> TypeScript, javascript
+- build tool -> Vite
+- iocns -> React Icons
+- host -> vercel
+
