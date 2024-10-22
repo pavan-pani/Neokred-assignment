@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Navbar from './components/navbar/Navbar';
-import Dashboard from './components/Dashboard';
-import './App.css'
+import React, { Suspense, useState } from 'react';
 import './index.css'
+const Dashboard = React.lazy(() => import('./components/Dashboard'));
+const Sidebar = React.lazy(() => import('./components/Sidebar'));
+
 
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -14,8 +13,12 @@ const App: React.FC = () => {
 
   return (
     <div className="flex">
-      <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-      <Dashboard />
+      
+      <Suspense fallback={<div className=' text-center text-xl'>Dashboard Loading...</div>}>
+        <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+        <Dashboard />
+      </Suspense>
+      
     </div>
   );
 };

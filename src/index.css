@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 .li-icon{
-  @apply py-2 flex items-center gap-3
+  @apply py-2 flex items-center gap-3 text-[#efefefe2]
+}
+.list{
+  @apply block text-[#efefefe2]
+}
+
+.cell{
+  @apply py-3 px-2 
 }
