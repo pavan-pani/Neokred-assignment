@@ -22,23 +22,23 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ show, position }) => {
       }`}
     >
       <ul>
-        <li className="li-icon flex items-center py-2">
-          <HiUserCircle className="size-6" />
-          <span className="ml-2">My Account</span>
+        <li className="li-icon">
+          <HiUserCircle className="size-5" />
+          <span>My Account</span>
         </li>
         <div className="h-[1px] bg-gray-500"></div>
-        <li className="li-icon flex items-center py-2">
-          <MdOutlinePrivacyTip />
-          <span className="ml-2">Privacy Policy</span>
+        <li className="li-icon">
+          <MdOutlinePrivacyTip className="size-5"/>
+          <span>Privacy Policy</span>
         </li>
-        <li className="li-icon flex items-center py-2">
-          <MdFeedback />
-          <span className="ml-2">Share Feedback</span>
+        <li className="li-icon">
+          <MdFeedback className="size-5"/>
+          <span>Share Feedback</span>
         </li>
         <div className="h-[1px] bg-gray-500"></div>
-        <li className="li-icon flex items-center py-2">
-          <LiaSignOutAltSolid />
-          <span className="ml-2">Sign Out</span>
+        <li className="li-icon">
+          <LiaSignOutAltSolid className="size-5"/>
+          <span>Sign Out</span>
         </li>
       </ul>
     </div>
