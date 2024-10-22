@@ -1,27 +1,50 @@
 import React, { useState } from "react";
 import { CiHome, CiShoppingCart, CiSettings } from "react-icons/ci";
-import { HiDocumentDuplicate, HiUserCircle, HiSparkles, HiQuestionMarkCircle } from "react-icons/hi";
-import { HiOutlineChevronUp, HiOutlineChevronDown, HiOutlineX } from "react-icons/hi";
-const ProfileSection = React.lazy(() => import('./Profile'));
+import {
+  HiDocumentDuplicate,
+  HiUserCircle,
+  HiSparkles,
+  HiQuestionMarkCircle,
+} from "react-icons/hi";
+import {
+  HiOutlineChevronUp,
+  HiOutlineChevronDown,
+  HiOutlineX,
+} from "react-icons/hi";
+const ProfileSection = React.lazy(() => import("./Profile"));
 
-const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isOpen, toggleSidebar }) => {
+const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
+  isOpen,
+  toggleSidebar,
+}) => {
   const [showProfile, setShowProfile] = useState(false);
   const [showNavItems, setNavItems] = useState(false);
 
   const toggleProfile = () => {
-    setShowProfile((prev) => !prev); 
+    setShowProfile((prev) => !prev);
   };
 
   return (
     <>
-      <nav className={`fixed z-30 inset-y-0 left-0 w-64 flex flex-col justify-between bg-black text-white transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
-        <button aria-label="close" onClick={toggleSidebar} className="md:hidden p-2 fixed top-1 right-2 pb-5">
+      <nav
+        className={`fixed z-30 inset-y-0 left-0 w-64 flex flex-col justify-between bg-black text-white transition-transform transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0`}
+      >
+        <button
+          aria-label="close"
+          onClick={toggleSidebar}
+          className="md:hidden p-2 fixed top-1 right-2 pb-5"
+        >
           <HiOutlineX />
         </button>
         <div>
           <div className="text-lg flex justify-between mt-4 md:mt-0 font-bold p-4">
             <span>Neo UI</span>
-            <button aria-label="show/hide" onClick={() => setNavItems(!showNavItems)}>
+            <button
+              aria-label="show/hide"
+              onClick={() => setNavItems(!showNavItems)}
+            >
               {showNavItems ? <HiOutlineChevronDown /> : <HiOutlineChevronUp />}
             </button>
           </div>
@@ -65,7 +88,11 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isO
             </li>
           </ul>
           <div className="h-[1px] my-2 bg-gray-500"></div>
-          <button aria-label="profile" onClick={toggleProfile} className="cursor-pointer hidden md:block">
+          <button
+            aria-label="profile"
+            onClick={toggleProfile}
+            className="cursor-pointer hidden md:block"
+          >
             <div className="flex gap-1 pl-2">
               <HiUserCircle className="size-12" />
               <div className="flex flex-col">
