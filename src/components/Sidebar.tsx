@@ -18,7 +18,7 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
   toggleSidebar,
 }) => {
   const [showProfile, setShowProfile] = useState(false);
-  const [showNavItems, setNavItems] = useState(false);
+  const [showNavItems, setNavItems] = useState(true);
 
   const toggleProfile = () => {
     setShowProfile((prev) => !prev);
@@ -34,7 +34,7 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
         <button
           aria-label="close"
           onClick={toggleSidebar}
-          className="md:hidden p-2 fixed top-1 right-2 pb-5"
+          className="md:hidden p-2 fixed top-1 right-2"
         >
           <HiOutlineX />
         </button>
@@ -87,7 +87,7 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({
               <HiSparkles className="size-5" /> <span>Changelog</span>
             </li>
           </ul>
-          <div className="h-[1px] my-2 bg-gray-500"></div>
+          <div className="h-[1px] hidden md:block my-2 bg-gray-500"></div>
           <button
             aria-label="profile"
             onClick={toggleProfile}
