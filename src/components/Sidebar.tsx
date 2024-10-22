@@ -1,4 +1,3 @@
-// Sidebar.tsx
 import React, { useState } from "react";
 import { CiHome, CiShoppingCart, CiSettings } from "react-icons/ci";
 import { HiDocumentDuplicate, HiUserCircle, HiSparkles, HiQuestionMarkCircle } from "react-icons/hi";
@@ -10,7 +9,7 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isO
   const [showNavItems, setNavItems] = useState(false);
 
   const toggleProfile = () => {
-    setShowProfile((prev) => !prev); // Toggle the profile section
+    setShowProfile((prev) => !prev); 
   };
 
   return (
@@ -67,10 +66,10 @@ const Sidebar: React.FC<{ isOpen: boolean; toggleSidebar: () => void }> = ({ isO
           </ul>
           <div className="h-[1px] my-2 bg-gray-500"></div>
           <button aria-label="profile" onClick={toggleProfile} className="cursor-pointer hidden md:block">
-            <div className="flex pl-2">
+            <div className="flex gap-1 pl-2">
               <HiUserCircle className="size-12" />
               <div className="flex flex-col">
-                <span className="">Pavan Kumar</span>
+                <span className="text-left">Pavan Kumar</span>
                 <span className="text-gray-500 text-xs">goudara.pavan.kumar@gmail.com</span>
               </div>
             </div>

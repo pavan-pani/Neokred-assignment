@@ -14,7 +14,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ show, position }) => {
   if (!show) return null;
 
   return (
-    <div className={`px-4 w-60 rounded-md bg-[#1f1f1f] text-white ${position === 'top' ? 'absolute top-16 right-2' : 'absolute z-50 bottom-16  left-2'}`}>
+    <div className={`px-4 w-60 rounded-md bg-[#171616fb] text-white ${position === 'top' ? 'absolute top-24 right-8' : 'absolute z-50 bottom-16  left-2'}`}>
       <ul>
         <li className="li-icon flex items-center py-2">
           <HiUserCircle className="size-6" />

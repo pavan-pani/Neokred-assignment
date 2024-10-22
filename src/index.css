@@ -10,5 +10,5 @@
 }
 
 .cell{
-  @apply py-3 px-2 
+  @apply py-3 px-2 pl-0
 }
