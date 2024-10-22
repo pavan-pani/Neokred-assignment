@@ -13,7 +13,7 @@ This project is built using **React.js** and **Tailwind CSS** as a frontend fram
 - Ui -> ReactsJS 18v
 - Style - > Tailwind CSS
 - Programimg language -> TypeScript, javascript
-- build tool -> Vite
-- iocns -> React Icons
-- host -> vercel
+- Build tool -> Vite
+- Icons -> React Icons
+- Host -> vercel 
 
